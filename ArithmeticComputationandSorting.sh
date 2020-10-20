@@ -25,3 +25,10 @@ do
    count=$(( $count+1 ))
 done
 echo "elements of the array are :"${array[@]}
+sort=`echo ${array[@]} | awk 'BEGIN{RS=" ";} {print $1}' | sort -n -r`
+counter=0
+for temporary_values in $sort
+do
+descending_array[((counter++))]="$temporary_values"
+done
+echo "descending order of the array:" ${descending_array[@]}
