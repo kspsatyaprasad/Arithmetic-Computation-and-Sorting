@@ -32,3 +32,10 @@ do
 descending_array[((counter++))]="$temporary_values"
 done
 echo "descending order of the array:" ${descending_array[@]}
+ascendingsort=`echo ${array[@]} | awk 'BEGIN{RS=" ";}{print $1}' | sort -n`
+counter1=0
+for temporary_value in $ascendingsort
+do
+ascending_array[(( counter1++))]="$temporary_value"
+done
+echo "ascending order of the array :" ${ascending_array[@]}
