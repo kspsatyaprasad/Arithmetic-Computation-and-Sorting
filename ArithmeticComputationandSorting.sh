@@ -8,3 +8,5 @@ second_computation=$(( $a*$b+$c ))
 echo second_computation:"$second_computation"
 third_computation=$(( $c+$a/$b ))
 echo third_computation:"$third_computation"
+fourth_computation=$(( $c%$a+$b ))
+echo first_computation:"$fourth_computation"
