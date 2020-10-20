@@ -14,6 +14,14 @@ declare -A computation
 computation[first_computation]=$first_computation
 computation[second_computation]=$second_computation
 computation[third_computation]=$third_computation
-computation[fourth_computation]=$fourth_computation
+computation[fourth_computation_computation]=$fourth_computation
 
 echo "dictionary values are :" ${computation[@]}
+
+temporary_array=${computation[@]}
+for temporary_values in $temporary_array
+do
+   array[count]=$temporary_values
+   count=$(( $count+1 ))
+done
+echo "elements of the array are :"${array[@]}
